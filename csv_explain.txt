@@ -1,0 +1,154 @@
+This contains the feedback for your PA4 submission.
+
+Warning messages from the compiler, if there are, are included in the
+CE_log.txt.
+
+The file grade_log.csv should be viewed as a spreadsheet.
+
+There are three sections: one for the -b option, one for the -e option, and one for the main function.
+
+pa4 -b:
+
+The first column contains the names of the test cases.  The remaining 
+columns are as follows: 
+
+Compile error:
+        0: if the executable was generated successfully
+        1: if there were compilation errors
+
+Time limit exceeded:
+        -1: if your program crashed or did not complete
+        0: if your program completed its execution within the time limit
+        1: otherwise
+
+Time(sec): the runtime of your program if it is a positive number
+
+Valid tree:
+	1: if your output file allows a binary tree to be constructed
+		correctly
+	0: if a tree can be built but something wrong is encountered
+		i.e., the file has a wrong format
+	-1: the file cannot be opened.
+
+
+Contain all nodes:
+	1: if the keys in the binary search tree match the final set
+		of keys that remains after performing all operations_in_file
+	0: otherwise
+
+Valid BST:
+	1: if the tree is a binary search tree (which may not contain
+		all the necessary keys, checked by second integer)
+	0: otherwise
+
+Balanced:
+	1: if the tree is height balanced
+	0: otherwise
+
+Fully match:
+	1: if the output file matches the expected one
+	0: otherwise
+
+Used memory (bytes):
+	amount of memory used by your program
+	-1: when your program timed out, seg fault, or stack overflow
+
+Stack overflow:
+	0: if no overflow
+	non-zero (timed out, segmentation fault, or actual overflow)
+
+Memory leak:
+	0: if no memory leak
+	non-zero (timed out, segmentation fault, or actual memory leak)
+
+Memory error:
+	0: if no memory error
+	non-zero (timed out, segmentation fault, or actual memory error)
+
+pa4 -e:
+
+The first column contains the names of the test cases.  The remaining 
+columns are as follows: 
+
+Compile error:
+        0: if the executable was generated successfully
+        1: if there were compilation errors
+
+Time limit exceeded:
+        -1: if your program crashed or did not complete
+        0: if your program completed its execution within the time limit
+        1: otherwise
+
+Time(sec): the runtime of your program if it is a positive number
+
+Valid tree (1st output):
+	your first stdout output
+
+BST (2nd output):
+	your second stdout output
+	
+Balanced (3rd output):
+	your third stdout output
+
+Should be:
+	the expected output for the test case 
+	(combined the three numbers reported with the commas removed)  
+
+Is correct:
+	1: if your outputs match the expected output
+	0: otherwise
+
+Used memory (bytes):
+	amount of memory used by your program
+	-1: when your program timed out, seg fault, or stack overflow
+
+Stack overflow:
+	0: if no overflow
+	non-zero (timed out, segmentation fault, or actual overflow)
+
+Memory leak:
+	0: if no memory leak
+	non-zero (timed out, segmentation fault, or actual memory leak)
+
+Memory error:
+	0: if no memory error
+	non-zero (timed out, segmentation fault, or actual memory error)
+
+The last set investigates how the main function
+handles (1) an invalid input filename (the file does not exist),
+(2) fewer than expected number of arguments, (3) more than expected 
+number of arguments, and (4) wrong options.
+
+Compile error:
+        0: if the executable was generated successfully
+        1: if there were compilation errors
+
+Time limit exceeded:
+        -1: if your program crashed or did not complete
+        0: if your program completed its execution within the time limit
+        1: otherwise
+
+Wrong answer:
+	0: means returns the correct status
+        other values mean the main function did not handle the testing
+		properly
+
+Used memory (bytes):
+	amount of memory used by your program
+	-1: when your program timed out, seg fault, or stack overflow
+
+Stack overflow:
+	0: if no overflow
+	non-zero (timed out, segmentation fault, or actual overflow)
+
+Memory leak:
+	0: if no memory leak
+	non-zero (timed out, segmentation fault, or actual memory leak)
+
+Memory error:
+	0: if no memory error
+	non-zero (timed out, segmentation fault, or actual memory error)
+
+  
+
+Cheng-Kok

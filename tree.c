@@ -94,11 +94,9 @@ Tnode* HBT_load(FILE* fp, int* validity) {
     int key;
     unsigned char mask;
 
-    // Try to read a node
     size_t read_key = fread(&key, sizeof(int), 1, fp);
     if (read_key == 0) return NULL; // Normal end of a branch
 
-    // If we read a key but can't read the mask, the file is truncated
     if (fread(&mask, sizeof(char), 1, fp) != 1) {
         *validity = 0;
         return NULL;
@@ -110,11 +108,7 @@ Tnode* HBT_load(FILE* fp, int* validity) {
     // BIT 1: Left Child
     if (mask & (1u << 1)) {
         node->left = HBT_load(fp, validity);
-        // If the mask said a child exists, but load returned NULL 
-        // AND validity is now 0, it was a truncated file.
         if (node->left == NULL && *validity == 0) return node;
-        // If the mask said a child exists, but load returned NULL 
-        // AND validity is STILL 1, it means the file ended too early.
         if (node->left == NULL && *validity == 1) {
             *validity = 0;
             return node;
@@ -125,7 +119,7 @@ Tnode* HBT_load(FILE* fp, int* validity) {
     if (mask & (1u << 0)) {
         node->right = HBT_load(fp, validity);
         if (node->right == NULL) {
-            *validity = 0;  // mask promised a child but got NULL
+            *validity = 0;
             return node;
         }
     }
@@ -142,17 +136,16 @@ int is_BST(Tnode* node, long min, long max) {
            is_BST(node->right, (long)node->key + 1, max);
 }
 
-// Balance Check: Returns height if balanced, -2 if unbalanced
 int check_AVL(Tnode* node) {
-    if (node == NULL) return -1; // Match prompt: empty height is -1
+    if (node == NULL) return -1;
 
     int lh = check_AVL(node->left);
     int rh = check_AVL(node->right);
 
-    if (lh == -2 || rh == -2) return -2; // Child is already unbalanced
+    if (lh == -2 || rh == -2) return -2;
 
     int diff = lh - rh;
-    if (diff < -1 || diff > 1) return -2; // Current node unbalanced
+    if (diff < -1 || diff > 1) return -2;
 
     return (lh > rh ? lh : rh) + 1;
 }
@@ -247,9 +240,11 @@ Tnode *rotate_right(Tnode *node){
     return new_root;
 }
 
-int get_height(Tnode *node){
+int get_height(Tnode *node) {
     if (node == NULL) return -1;
-    int lh = get_height(node->left);
-    int rh = get_height(node->right);
-    return (lh > rh ? lh : rh) + 1;
+    if (node->balance >= 0) {
+        return get_height(node->left) + 1;
+    } else {
+        return get_height(node->right) + 1;
+    }
 }

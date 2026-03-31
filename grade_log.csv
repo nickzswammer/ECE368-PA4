@@ -1,0 +1,84 @@
+pa4 -b evaluation
+Cases,Compile error,Time limit exceeded,Time(sec),Valid tree,Contain all nodes,Valid BST,Balanced,Fully match,Used memory (bytes),Stack overflow,Memory leak,Memory error
+del_easy_0rot_2.b,0,0,0.00788,1,1,1,1,1,23704,0,0,0
+del_easy_1rot_2.b,0,0,0.00796,1,1,1,1,1,22744,0,0,0
+del_easy_2rot_4.b,0,0,0.00805,1,1,1,1,1,24184,0,0,0
+del_hard_0rot_2.b,0,0,0.00789,1,1,1,1,1,23320,0,0,0
+del_hard_1rot_4.b,0,0,0.00794,1,1,1,1,1,25336,0,0,0
+del_hard_2rot_4.b,0,0,0.008,1,1,1,1,1,24184,0,0,0
+ins_0rot_5.b,0,0,0.01599,1,1,1,1,1,39832,0,0,0
+ins_1rot_5.b,0,0,0.01591,1,1,1,1,1,39928,0,0,0
+ins_2arot_5.b,0,0,0.00797,1,1,1,1,1,39928,0,0,0
+ins_2brot_5.b,0,0,0.00806,1,1,1,1,1,39928,0,0,0
+ins_2crot.b,0,0,0.00801,1,1,1,1,1,21976,0,0,0
+ins_asc_1K.b,0,0,0.00787,1,1,1,1,1,45424,0,0,0
+ins_asc_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_asc_1K.b,0,0,0.01625,1,1,1,1,1,45424,0,0,0
+ins_del_asc_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_des_1K.b,0,0,0.01605,1,1,1,1,1,45424,0,0,0
+ins_del_des_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_min_27.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_min_5.b,0,0,0.01611,1,1,1,1,1,21904,0,0,0
+ins_del_rand_1K_10.b,0,0,0.00788,1,1,1,1,1,45664,0,0,0
+ins_del_rand_1M_10K.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_uniform_100K.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_del_uniform_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_des_1K.b,0,0,0.0162,1,1,1,1,1,45424,0,0,0
+ins_des_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_min_27_0rot.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+ins_min_5_0rot.b,0,0,0.00799,1,1,1,1,1,21904,0,0,0
+ins_rand_1K.b,0,0,0.01606,1,1,1,1,1,45424,0,0,0
+ins_rand_1M.b,0,1,-1,1,0,1,1,0,-1,-1,-1,-1
+
+pa4 -e evaluation
+Cases,Compile error,Time limit exceeded,Time(sec),Valid tree (1st output),BST (2nd output),Balanced (3rd output),Should be,Is correct,Used memory (bytes),Stack overflow,Memory leak,Memory error
+del_easy_0rot_2.bte,0,0,0.00395,1,1,1,111,1,14272,0,0,0
+del_easy_1rot_2.hbte,0,0,0.00383,1,1,1,111,1,13888,0,0,0
+del_easy_2rot_4.bte,0,0,0.00403,1,1,0,110,1,15232,0,0,0
+del_hard_0rot_2.hbte,0,0,0.00404,1,1,1,111,1,14440,0,0,0
+del_hard_1rot_4.bte,0,0,0.00401,1,1,0,110,1,16480,0,0,0
+del_hard_2rot_4.hbte,0,0,0.00401,1,1,1,111,1,15232,0,0,0
+ins_0rot_5.bte,0,0,0.00389,1,1,1,111,1,31168,0,0,0
+ins_1rot_5.hbte,0,0,0.00385,1,1,1,111,1,31264,0,0,0
+ins_2arot_5.bte,0,0,0.00401,1,1,0,110,1,31264,0,0,0
+ins_2brot_5.hbte,0,0,0.00394,1,1,1,111,1,31264,0,0,0
+ins_2crot.bte,0,0,0.00401,1,1,0,110,1,13312,0,0,0
+ins_asc_1K.hbte,0,0,0.00386,1,1,1,111,1,36760,0,0,0
+ins_del_asc_1K.bte,0,0,0.0038,1,1,0,110,1,30760,0,0,0
+ins_del_des_1K.hbte,0,0,0.00388,1,1,1,111,1,30760,0,0,0
+ins_del_min_27.bte,0,0,0.1147,1,1,0,110,1,19981672,0,0,0
+ins_del_min_5.hbte,0,0,0.00382,1,1,1,111,1,13216,0,0,0
+ins_del_rand_1K_10.bte,0,0,0.00386,1,1,0,110,1,36784,0,0,0
+ins_des_1K.hbte,0,0,0.00386,1,1,1,111,1,36760,0,0,0
+ins_min_27_0rot.bte,0,0,0.16496,1,1,1,111,1,19981696,0,0,0
+ins_min_5_0rot.hbte,0,0,0.00399,1,1,1,111,1,13240,0,0,0
+ins_rand_1K.bte,0,0,0.00384,1,1,0,110,1,36760,0,0,0
+del_easy_0rot_2.hbte.n,0,0,0.00401,1,0,1,101,1,14272,0,0,0
+del_easy_1rot_2.bte.n,0,0,0.00406,1,0,0,100,1,13888,0,0,0
+del_easy_2rot_4.hbte.n,0,0,0.0039,1,0,1,101,1,15232,0,0,0
+del_hard_0rot_2.bte.n,0,0,0.00404,1,0,1,101,1,14440,0,0,0
+del_hard_1rot_4.hbte.n,0,0,0.00394,1,0,1,101,1,16480,0,0,0
+del_hard_2rot_4.bte.n,0,0,0.00385,1,0,0,100,1,15232,0,0,0
+ins_0rot_5.hbte.n,0,0,0.00816,1,0,1,101,1,31168,0,0,0
+ins_1rot_5.bte.n,0,0,0.00387,1,0,0,100,1,31264,0,0,0
+ins_2arot_5.hbte.n,0,0,0.00403,1,0,1,101,1,31264,0,0,0
+ins_2brot_5.bte.n,0,0,0.00403,1,0,0,100,1,31264,0,0,0
+ins_2crot.hbte.n,0,0,0.00384,1,0,1,101,1,13312,0,0,0
+ins_asc_1K.bte.n,0,0,0.00388,1,0,0,100,1,36760,0,0,0
+ins_del_asc_1K.hbte.n,0,0,0.00386,1,0,1,101,1,30760,0,0,0
+ins_del_des_1K.bte.n,0,0,0.00396,1,0,0,100,1,30760,0,0,0
+ins_del_min_27.hbte.n,0,0,0.1648,1,0,1,101,1,19981672,0,0,0
+ins_del_min_5.bte.n,0,0,0.00387,1,0,0,100,1,13216,0,0,0
+ins_del_rand_1K_10.hbte.n,0,0,0.004,1,0,1,101,1,36784,0,0,0
+ins_des_1K.bte.n,0,0,0.00397,1,0,0,100,1,36760,0,0,0
+ins_min_27_0rot.hbte.n,0,0,0.21499,1,0,1,101,1,19981696,0,0,0
+ins_min_5_0rot.bte.n,0,0,0.00402,1,0,1,101,1,13240,0,0,0
+ins_rand_1K.hbte.n,0,0,0.004,1,0,1,101,1,36760,0,0,0
+
+pa4 main (for your info only)
+Cases,Compile error,Time limit exceeded,Wrong answer,Used memory (bytes),Stack overflow,Memory leak,Memory error
+Invalid input filename test,0,0,0,4568,0,0,0
+Too few arguments test,0,0,0,0,0,0,0
+Too many arguments test,0,0,0,0,0,0,0
+Invalid option test,0,0,0,0,0,0,0
+
